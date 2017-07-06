@@ -1,7 +1,19 @@
 class InterfaceMan{
- private String name;
- public void kazu(){
-  System.out.println("数を入力してください");
-  
-}
-}
+      private String msgInput = "数を入力してください >";
+      private String msgAtari = "あたり！";
+      private String msgHazure = "ハズレ";
+      private int userAnswer;
+      
+    
+      public void kazu(){
+      }
+      public void showMsgInput(){
+      
+      }
+      public int getUserAnswer(){
+      }
+      public void showMsgAtari(){
+      }
+      public void showMsgHazure(){
+      }
+    }
