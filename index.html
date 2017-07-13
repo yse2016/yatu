@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xml:lang="ja" lang="ja">
+<head>
+<meta charset="utf-8">
+<title>ポケモン</title>
+<link rel="stylesheet" type="text/css" href="http://black-flag.net/data/css/reset.css">
+<link rel="stylesheet" type="text/css" href="common.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(function(){
+	var maxNum = 10, // 最大枚数
+	rdm = Math.floor(Math.random()*(maxNum))+1;
+	$('#randomShow').attr('src', 'photo' + rdm + '.png');
+});
+</script>
+</head>
+
+<body>
+<h1>ポケモンいえるかな</h1>
+
+<div id="container">
+
+<img src="img/blank.jpg" alt="" id="randomShow">
+
+<br><br><input type="submit" value="リロード" onclick="location.reload();">
+
+</div><!-- /#container -->
+
+</body>
+</html>
