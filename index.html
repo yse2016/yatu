@@ -2,29 +2,65 @@
 <html xml:lang="ja" lang="ja">
 <head>
 <meta charset="utf-8">
-<title>ポケモン</title>
-<link rel="stylesheet" type="text/css" href="http://black-flag.net/data/css/reset.css">
-<link rel="stylesheet" type="text/css" href="common.css">
+<title>ポケモンいえるかな</title>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>
-$(function(){
-	var maxNum = 10, // 最大枚数
-	rdm = Math.floor(Math.random()*(maxNum))+1;
-	$('#randomShow').attr('src', 'photo' + rdm + '.png');
-});
+
+
+		function onButtonClick() {
+			var val = document.forms.form1.textBox1.value;
+			var target = document.getElementById("output");
+			if (val == "キツネ") {
+				target.innerHTML = "正解";
+			} else {
+				target.innerHTML = "ばつ";           
+			}
+		}
+
+
 </script>
 </head>
 
 <body>
+
 <h1>ポケモンいえるかな</h1>
 
-<div id="container">
+<script>
+img = new Array();
+img[0] = "001.png";
+img[1] = "002.png";
+img[2] = "003.png";
 
-<img src="img/blank.jpg" alt="" id="randomShow">
+n = Math.floor(Math.random()*img.length);
+document.write("<img src='"+img[n]+"' border='0'>");
 
-<br><br><input type="submit" value="リロード" onclick="location.reload();">
 
-</div><!-- /#container -->
+		function onButtonClick() {
+			var val = document.forms.form1.textBox1.value; 
+			var target = document.getElementById("output");
+			if (val == "フシギダネ" & n == 0){
+				target.innerHTML = "正解";
+			} else if(val == "フシギソウ" & n == 1){
+				target.innerHTML = "正解";           
+			} else if(val == "フシギバナ" & n == 2){
+				target.innerHTML = "正解";
+			}else{
+				target.innerHTML = "ばつ";
+			}	
+		}
+
+
+</script>
+
+
+	<form action="" id="form1">
+
+		<input id="textBox1" type="text" value="" />
+		<input type="button" value="答える" onclick="onButtonClick();" />
+		<input type="submit" value="次へ" onclick="location.reload();">
+	</form>
+	<div id="output"></div>
 
 </body>
 </html>
