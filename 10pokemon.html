@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html  lang="ja">
+<head>
+<meta charset="utf-8">
+<title>ポケモンいえるかな</title>
+<style type="text/css">
+   #output{padding-top:200px;}
+</style>
+</head>
+
+<body>
+
+<h1>ポケモンいえるかな</h1>
+<div class="display" id="output" style="position:absolute;top:-100px;right:390px;">
+</div>
+
+
+
+<script>
+img = new Array();
+img[0] = "001.png";
+img[1] = "002.png";
+img[2] = "003.png";
+img[3] = "004.png";
+img[4] = "005.png";
+img[5] = "006.png";
+img[6] = "007.png";
+img[7] = "008.png";
+img[8] = "009.png";
+img[9] = "025.png";
+n = Math.floor(Math.random()*img.length);
+document.write("<img src='"+img[n]+"' border='0'>");
+        function onButtonClick() {
+            var val = document.forms.form1.textBox1.value; 
+            var target = document.getElementById("output");
+            if (val == "フシギダネ" & n == 0){
+                target.innerHTML = "<img src='maru.png'>";
+            } else if(val == "フシギソウ" & n == 1){
+                target.innerHTML = "<img src='maru.png'>";      
+            } else if(val == "フシギバナ" & n == 2){
+                target.innerHTML = "<img src='maru.png'>";
+            }else if(val == "ヒトカゲ" & n == 3){
+                target.innerHTML = "<img src='maru.png'>";
+            }else if(val == "リザード" & n == 4){
+                target.innerHTML = "<img src='maru.png'>";
+            }else if(val == "リザードン" & n == 5){
+                target.innerHTML = "<img src='maru.png'>";
+            }else if(val == "ゼニガメ" & n == 6){
+                target.innerHTML = "<img src='maru.png'>";
+            }else if(val == "カメール" & n == 7){
+                target.innerHTML = "<img src='maru.png'>";
+            }else if(val == "カメックス" & n == 8){
+                target.innerHTML = "<img src='maru.png'>";
+             }else if(val == "ピカチュウ" & n == 9){
+                target.innerHTML = "<img src='maru.png'>";
+            }   else{
+                target.innerHTML = "<img src='batu.png'>";
+            }
+        }
+
+    
+
+</script>
+<script>
+        function nextButtonClick(){
+            n = Math.floor(Math.random()*img.length);
+        document.write("<img src='"+img[n]+"' border='0'>");
+        }
+</script>
+
+
+    <form id="form1">
+
+        <input id="textBox1" type="text">
+        <input type="button" value="答える" onclick="onButtonClick()">
+        <input type="button" value="次へ" onclick="nextButtonClick()">
+    </form>
+    
+
+    
+
+</body>
+</html>
