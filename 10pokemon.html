@@ -13,6 +13,9 @@
 <h1>ポケモンいえるかな</h1>
 <div class="display" id="output" style="position:absolute;top:-100px;right:390px;">
 </div>
+
+
+
 <script>
 img = new Array();
 img[0] = "001.png";
@@ -54,14 +57,23 @@ document.write("<img src='"+img[n]+"' border='0'>");
                 target.innerHTML = "<img src='batu.png'>";
             }
         }
+
+    
+
+</script>
+<script>
+        function nextButtonClick(){
+            n = Math.floor(Math.random()*img.length);
+        document.write("<img src='"+img[n]+"' border='0'>");
+        }
 </script>
 
 
-    <form action="" id="form1">
+    <form id="form1">
 
-        <input id="textBox1" type="text" value="" />
-        <input type="button" value="答える" onclick="onButtonClick();" />
-        <input type="submit" value="次へ" onclick="location.reload();">
+        <input id="textBox1" type="text">
+        <input type="button" value="答える" onclick="onButtonClick()">
+        <input type="button" value="次へ" onclick="nextButtonClick()">
     </form>
     
 
